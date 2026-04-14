@@ -22,7 +22,7 @@ This API serves as a centralized management system where users can explore Pokem
 The system architecture handles complex relational data:
 * **Many-to-Many:** Pokemon & Owners, Pokemon & Categories.
 * **One-to-Many:** Country & Owners, Pokemon & Reviews, Reviewer & Reviews.
-* **Data Integrity:** Implemented custom logic for bulk deletes and relational cleanup.
+* **Seed Data:** Includes a pre-configured `Seed.cs` to populate the database with initial Pokemon, Owners, and Reviews for immediate testing.
 
 ## 🚀 Key Features & Functionalities
 
@@ -40,13 +40,16 @@ The system architecture handles complex relational data:
 
 ## 🔗 Main API Endpoints
 
-| Controller | Method | Endpoint | Description |
-| :--- | :--- | :--- | :--- |
-| **Pokemon** | GET | `/api/Pokemon` | Get all pokemons |
-| **Pokemon** | POST | `/api/Pokemon` | Create a new pokemon entry |
-| **Owner** | GET | `/api/Owner` | Get all registered owners |
-| **Review** | DELETE | `/api/Review/{id}` | Delete a specific review |
-| **Reviewer** | DELETE | `/api/Reviewer/{id}` | Delete reviewer and all their reviews |
+Endpoints အားလုံးကို အုပ်စုအလိုက် အောက်ပါအတိုင်း ခွဲထားပါတယ်-
+
+| Controller | Available Endpoints |
+| :--- | :--- |
+| **Pokemon** | `GET /api/Pokemon`, `GET /api/Pokemon/{id}`, `POST /api/Pokemon`, `PUT /api/Pokemon/{id}`, `DELETE /api/Pokemon/{id}` |
+| **Category** | `GET /api/Category`, `GET /api/Category/{id}`, `GET /api/Category/pokemon/{categoryId}` |
+| **Country** | `GET /api/Country`, `GET /api/Country/{id}`, `GET /api/Country/owners/{ownerId}` |
+| **Owner** | `GET /api/Owner`, `GET /api/Owner/{id}`, `GET /api/Owner/{ownerId}/pokemon` |
+| **Review** | `GET /api/Review`, `GET /api/Review/{id}`, `GET /api/Review/pokemon/{pokeId}`, `DELETE /api/Review/{id}` |
+| **Reviewer** | `GET /api/Reviewer`, `GET /api/Reviewer/{id}`, `GET /api/Reviewer/{reviewerId}/reviews`, `DELETE /api/Reviewer/{id}` |
 
 ## 🛠 Installation & Setup
 
@@ -55,11 +58,12 @@ The system architecture handles complex relational data:
     git clone [https://github.com/kaunghtetzaw139432/Pokemon-Review-System---RESTful-Web-AP.git](https://github.com/kaunghtetzaw139432/Pokemon-Review-System---RESTful-Web-AP.git)
     ```
 2.  **Database Configuration:**
-    Update the `ConnectionStrings` in `appsettings.json` to point to your local SQL Server.
-3.  **Apply Migrations:**
+    Update the `ConnectionStrings` in `appsettings.json`.
+3.  **Apply Migrations & Seed Data:**
     ```powershell
     Update-Database
     ```
+    *(The application will automatically seed data on the first run if configured in Program.cs)*
 4.  **Run the App:**
     ```bash
     dotnet run
@@ -71,7 +75,7 @@ The system architecture handles complex relational data:
 
 **Kaung Htet Zaw**
 * **Education:** 5th Year Software Engineering Student (6-Year Academic Program)
-* **Specialization:** Backend Engineering (C# .NET, Java Spring Boot)
+* **Core Interests:** Backend Systems, C# .NET Core, Java Spring Boot, and DevOps.
 * **Connect:** [LinkedIn](https://www.linkedin.com/in/kaung-htet-zaw-backend) | [GitHub](https://github.com/kaunghtetzaw139432)
 
 ---
