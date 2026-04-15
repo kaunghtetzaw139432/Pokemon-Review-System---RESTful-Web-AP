@@ -40,8 +40,6 @@ The system architecture handles complex relational data:
 
 ## 🔗 Main API Endpoints
 
-Endpoints အားလုံးကို အုပ်စုအလိုက် အောက်ပါအတိုင်း ခွဲထားပါတယ်-
-
 | Controller | Available Endpoints |
 | :--- | :--- |
 | **Pokemon** | `GET /api/Pokemon`, `GET /api/Pokemon/{id}`, `POST /api/Pokemon`, `PUT /api/Pokemon/{id}`, `DELETE /api/Pokemon/{id}` |
