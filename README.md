@@ -8,6 +8,23 @@ A comprehensive backend solution built with **ASP.NET Core Web API** to manage a
 
 This API serves as a centralized management system where users can explore Pokemons, track their owners across different countries, and manage a community-driven review system. It's built with a focus on **Scalability**, **Separation of Concerns**, and **Clean Code**.
 
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="width: 50%; text-align: center; vertical-align: top; padding: 10px;">
+      <b>📊 Database ER Diagram</b><br><br>
+      <img src="https://github.com/user-attachments/assets/ec5da2ad-a6a7-4384-9a5c-03c7a3bf52de" width="100%" alt="Database ER Diagram">
+      <p><i>Relational design showing Many-to-Many & One-to-Many mapping.</i></p>
+    </td>
+    <td style="width: 50%; text-align: center; vertical-align: top; padding: 10px;">
+      <b>🏗 Repository Pattern Architecture</b><br><br>
+      <img src="https://github.com/user-attachments/assets/392f79e9-fe2e-48cc-bca4-a29d64998091" width="100%" alt="Repository Pattern Architecture">
+      <p><i>Layered architecture ensuring separation of concerns.</i></p>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🛠 Tech Stack & Architecture
 
 * **Framework:** .NET 10.0 (ASP.NET Core Web API)
